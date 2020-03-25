@@ -1,4 +1,4 @@
-package threadTest;
+package threadTest.threadpooltest;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
@@ -21,6 +21,7 @@ public class FixThreadPoolTest {
 
     }
 }
+
 class Ttask implements  Runnable{
     ScheduledExecutorService s=null;
     int times=0;

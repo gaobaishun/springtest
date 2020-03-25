@@ -1,4 +1,4 @@
-package threadTest;
+package threadTest.threadpooltest;
 
 public class EveryTaskOneThread {
     public static void main(String[] args) {

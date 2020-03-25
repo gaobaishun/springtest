@@ -1,5 +1,6 @@
 package startc;
 
+import aaa.A;
 import org.springframework.beans.factory.xml.XmlBeanDefinitionReader;
 import org.springframework.beans.factory.xml.XmlBeanFactory;
 import org.springframework.context.ApplicationContext;
@@ -7,6 +8,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.context.support.FileSystemXmlApplicationContext;
 import org.springframework.core.io.ClassPathResource;
 import testc.Book;
+import testc.TestBean;
 
 public class Start {
     public static void main(String[] args) {
@@ -34,10 +36,13 @@ public class Start {
 
         FileSystemXmlApplicationContext fileSystemXmlApplicationContext=new FileSystemXmlApplicationContext("/Sdemo/src/spring-config.xml");
 
-        Book book=fileSystemXmlApplicationContext.getBean("book",Book.class);
-        Book book2=fileSystemXmlApplicationContext.getBean("book",Book.class);
-        System.out.println(book.hashCode()==book2.hashCode());
-        book.printBookInfo();
+//        Book book=fileSystemXmlApplicationContext.getBean("book",Book.class);
+//        Book book2=fileSystemXmlApplicationContext.getBean("book",Book.class);
+//        System.out.println(book.hashCode()==book2.hashCode());
 
+        TestBean testBean=fileSystemXmlApplicationContext.getBean("testBean",TestBean.class);
+        //System.out.println(testBean.getS());
+        //book.printBookInfo();
+        //System.out.println(new A().a);
     }
 }

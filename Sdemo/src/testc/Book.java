@@ -24,4 +24,7 @@ public class Book {
     public void printBookInfo() {
         System.out.println("Book Name：" + this.bookName + ",Author：" + this.author);
     }
+    public void init(){
+        System.out.println("book 的初始化方法");
+    }
 }
